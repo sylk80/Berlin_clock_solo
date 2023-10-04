@@ -9,6 +9,7 @@ describe('Berlin Clock testing...', () => {
       expect(show_berlin_clock()).toBeDefined();
     });
     test('should accept input...', () => {
-        expect(show_berlin_clock()).toBe("Time required in HH:mm:ss format");
+        expect(show_berlin_clock()).toBe("Input time is required");
     });
+
   });
