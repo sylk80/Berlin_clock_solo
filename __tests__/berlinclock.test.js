@@ -18,4 +18,9 @@ describe('Berlin Clock testing...', () => {
         let clock = show_berlin_clock("test")
         expect(typeof clock === "string").toBe(true)
     });
+    test('should return a string with fixed characters...', () => {
+        let clock2 = show_berlin_clock("00:00:00")
+        const regex = /[O,R,Y]/g
+        expect(clock2.match(regex)).toHaveLength(24)
+    });
   });
