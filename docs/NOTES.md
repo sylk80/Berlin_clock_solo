@@ -56,7 +56,7 @@ YOOO
 
 :heavy_plus_sign: Boundaries
 
-- Should accept input
+- Should accept input :heavy_check_mark:
 - Input should be eight length
 - Output should be string
 - Output should contain only O, R,Y
