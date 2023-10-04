@@ -1,5 +1,5 @@
-class Template {}
+class BerlinClock {}
 
 const template_method = () => "Hello world";
 
-module.exports = {Template, template_method}
+module.exports = {BerlinClock, template_method}
