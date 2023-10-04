@@ -59,6 +59,6 @@ YOOO
 - Should accept input :heavy_check_mark:
 - Input should be eight length :heavy_check_mark:
 - Output should be string :heavy_check_mark:
-- Output should contain only O, R,Y
-- Output should have 5 rows
+- Output should contain only O, R,Y :heavy_check_mark:
+- Output should have 5 rows :heavy_check_mark:
 

@@ -1,4 +1,5 @@
 const { BerlinClock, show_berlin_clock} = require('../src/berlinclock.js');
+const {split} = require("lodash");
 
 describe('Berlin Clock testing...', () => {
     test('should be a BerlinClock class...', () => {
@@ -22,5 +23,10 @@ describe('Berlin Clock testing...', () => {
         let clock2 = show_berlin_clock("00:00:00")
         const regex = /[O,R,Y]/g
         expect(clock2.match(regex)).toHaveLength(24)
+    });
+    test('should have five rows...', () => {
+        let clock3 = show_berlin_clock("00:00:00")
+        let rows = clock3.split("\n")
+        expect(rows).toHaveLength(5)
     });
   });
