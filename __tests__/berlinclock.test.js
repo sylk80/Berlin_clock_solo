@@ -30,3 +30,11 @@ describe('Berlin Clock testing...', () => {
         expect(rows).toHaveLength(5)
     });
   });
+
+describe('Berlin Clock rows testing...', () => {
+    test('first row should return Y on 00:00:00...', () => {
+        const clock = show_berlin_clock("00:00:00")
+        let rows = clock.split("\n")
+        expect(rows[0]).toBe('Y');
+    });
+})
