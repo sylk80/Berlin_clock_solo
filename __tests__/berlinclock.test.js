@@ -14,4 +14,8 @@ describe('Berlin Clock testing...', () => {
     test('should accept input with 8 length...', () => {
         expect(show_berlin_clock("12:20:1245")).toBe("Time required in HH:mm:ss format");
     });
+    test('should return a string...', () => {
+        let clock = show_berlin_clock("test")
+        expect(typeof clock === "string").toBe(true)
+    });
   });
