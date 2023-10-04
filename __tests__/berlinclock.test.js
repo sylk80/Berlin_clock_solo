@@ -11,5 +11,7 @@ describe('Berlin Clock testing...', () => {
     test('should accept input...', () => {
         expect(show_berlin_clock()).toBe("Input time is required");
     });
-
+    test('should accept input with 8 length...', () => {
+        expect(show_berlin_clock("12:20:1245")).toBe("Time required in HH:mm:ss format");
+    });
   });
