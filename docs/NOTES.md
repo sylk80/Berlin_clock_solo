@@ -62,3 +62,28 @@ YOOO
 - Output should contain only O, R,Y :heavy_check_mark:
 - Output should have 5 rows :heavy_check_mark:
 
+:heavy_plus_sign: Row test
+
+- First row Y on even seconds
+- First row O on odd seconds
+- Second row 0000 on 0-4 hours plus,
+- Second row R000 on 5-9 hours plus, 
+- Second row RR00 on 10-14 hours plus, 
+- Second row RRR0 on 15-19 hours plus, 
+- Second row RRRR on 20-23 hours plus,
+- Third row 0000 on (4+5x)0 hours plus,
+- Third row R000 on (4+5x)1 hour plus,
+- Third row RR00 on (4+5x)2 hours plus,
+- Third row RRR0 on (4+5x)3 hours plus,
+- Third row RRRR on (4+5x)4 hours plus, 
+- Fourth row 00000000000 - 0 minutes
+- Fourth row Y0000000000 - 5 minutes
+- Fourth row YY000000000 - 10 minutes
+- Fourth row YYR00000000 - 15 minutes
+- Fifth row 0000 on 0 minutes,
+- Fifth row Y000 on 1 minutes
+- Fifth row YY00 on 2 minutes
+- Fifth row YYY0 on 3 minutes
+- Fifth row YYYY on 4 minutes
+
+
