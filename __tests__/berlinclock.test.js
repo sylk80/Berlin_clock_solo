@@ -1,4 +1,4 @@
-const { BerlinClock, template_method} = require('../src/template.js');
+const { BerlinClock, show_berlin_clock} = require('../src/berlinclock.js');
 
 describe('Berlin Clock testing...', () => {
     test('should be a BerlinClock class...', () => {
@@ -6,6 +6,6 @@ describe('Berlin Clock testing...', () => {
       expect(template).toBeDefined();
     });
     test('should be a template_method method...', () => {
-      expect(template_method()).toEqual('Hello world');
+      expect(show_berlin_clock()).toEqual('Hello world');
     });
   });
