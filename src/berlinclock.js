@@ -16,9 +16,16 @@ class BerlinClock {
         return error
     }
 
+    showSeconds() {
+         let seconds = this.time.split(":")[2]
+         return seconds % 2 === 0 ? 'Y' : 'O'
+    }
+
+
+
     showClock() {
         let error = this.checkValidity();
-        return  error === null ? "O\nRROO\nRROO\nYYRYYRYYRYY\nYOOO": error
+        return  error === null ? this.showSeconds()+"\nRROO\nRROO\nYYRYYRYYRYY\nYOOO": error
     }
 }
 
