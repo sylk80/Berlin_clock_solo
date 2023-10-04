@@ -57,8 +57,8 @@ YOOO
 :heavy_plus_sign: Boundaries
 
 - Should accept input
-- Input should be eight lenght
+- Input should be eight length
 - Output should be string
 - Output should contain only O, R,Y
-- Putpit should have 5 rows
+- Output should have 5 rows
 

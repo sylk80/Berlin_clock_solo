@@ -5,7 +5,10 @@ describe('Berlin Clock testing...', () => {
       const template = new BerlinClock();
       expect(template).toBeDefined();
     });
-    test('should be a template_method method...', () => {
-      expect(show_berlin_clock()).toEqual('Hello world');
+    test('should be a show_berlin_clock method...', () => {
+      expect(show_berlin_clock()).toBeDefined();
+    });
+    test('should accept input...', () => {
+        expect(show_berlin_clock()).toBe("Time required in HH:mm:ss format");
     });
   });
