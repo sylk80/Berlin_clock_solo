@@ -21,11 +21,19 @@ class BerlinClock {
          return seconds % 2 === 0 ? 'Y' : 'O'
     }
 
+    showFiveHours() {
+        let hours = this.time.split(":")[0]
+        if(hours < 4) {
+            return 'OOOO'
+        }
+    }
+
 
 
     showClock() {
         let error = this.checkValidity();
-        return  error === null ? this.showSeconds()+"\nRROO\nRROO\nYYRYYRYYRYY\nYOOO": error
+        return  error === null ? this.showSeconds()+"\n"+
+            this.showFiveHours()+"\nRROO\nYYRYYRYYRYY\nYOOO": error
     }
 }
 
