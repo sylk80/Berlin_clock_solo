@@ -38,12 +38,25 @@ class BerlinClock {
         return secondRow.join("")
     }
 
+    showFivePlusHours() {
+        let thirdRow = ['O', 'O', 'O', 'O']
+        let hours = this.time.split(":")[0]
+        let fivePlusHours = (hours-4) % 5
+        let fiveIndex = 0;
+        while(fiveIndex < fivePlusHours) {
+            thirdRow[fiveIndex] = 'R'
+            fiveIndex++
+        }
+        return thirdRow.join("")
+    }
+
 
 
     showClock() {
         let error = this.checkValidity();
         return  error === null ? this.addLineEnd(this.showSeconds())+
-            this.addLineEnd(this.showFiveHours())+"RROO\nYYRYYRYYRYY\nYOOO": error
+            this.addLineEnd(this.showFiveHours())+this.addLineEnd(this.showFivePlusHours())+
+            "YYRYYRYYRYY\nYOOO": error
     }
 }
 
