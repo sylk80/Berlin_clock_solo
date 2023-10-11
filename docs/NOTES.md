@@ -77,7 +77,7 @@ YOOO
 - Third row RRR0 on (4+5x)3 hours plus,
 - Third row RRRR on (4+5x)4 hours plus, :heavy_check_mark:
 - Fourth row 00000000000 - 0 minutes :heavy_check_mark:
-- Fourth row Y0000000000 - 5 minutes
+- Fourth row Y0000000000 - 5 minutes :heavy_check_mark:
 - Fourth row YY000000000 - 10 minutes
 - Fourth row YYR00000000 - 15 minutes
 - Fifth row 0000 on 0 minutes,
