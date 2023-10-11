@@ -56,10 +56,14 @@ class BerlinClock {
         let fiveMinutes = Math.floor(minutes / 5);
         let fiveIndex = 0;
         while(fiveIndex < fiveMinutes) {
-            fourthRow[fiveIndex] = 'Y'
+            fourthRow[fiveIndex] = this.showQuarter(fiveIndex)
             fiveIndex++
         }
         return fourthRow.join("")
+    }
+
+    showQuarter(index) {
+        return (index+1) % 3 === 0 ? 'R' : 'Y'
     }
 
 
