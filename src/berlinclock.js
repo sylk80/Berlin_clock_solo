@@ -22,10 +22,17 @@ class BerlinClock {
     }
 
     showFiveHours() {
+        let secondRow = ['O', 'O', 'O', 'O']
         let hours = this.time.split(":")[0]
-        if(hours < 4) {
-            return 'OOOO'
+        console.log(hours)
+        let fiveHours = Math.floor(hours / 5);
+        console.log(fiveHours)
+        let fiveIndex = 0;
+        while(fiveIndex < fiveHours) {
+            secondRow[fiveIndex] = 'R'
+            fiveIndex++
         }
+        return secondRow.join("")
     }
 
 
