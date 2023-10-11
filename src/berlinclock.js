@@ -50,13 +50,25 @@ class BerlinClock {
         return thirdRow.join("")
     }
 
+    showFiveMinutes() {
+        let fourthRow = ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+        let minutes = this.time.split(":")[1]
+        let fiveMinutes = Math.floor(minutes / 5);
+        let fiveIndex = 0;
+        while(fiveIndex < fiveMinutes) {
+            fourthRow[fiveIndex] = 'Y'
+            fiveIndex++
+        }
+        return fourthRow.join("")
+    }
+
 
 
     showClock() {
         let error = this.checkValidity();
         return  error === null ? this.addLineEnd(this.showSeconds())+
             this.addLineEnd(this.showFiveHours())+this.addLineEnd(this.showFivePlusHours())+
-            "YYRYYRYYRYY\nYOOO": error
+            this.addLineEnd(this.showFiveMinutes())+"YOOO": error
     }
 }
 
