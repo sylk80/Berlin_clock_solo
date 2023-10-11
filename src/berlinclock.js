@@ -1,6 +1,7 @@
 class BerlinClock {
 
     time = null
+    lineEnd = "\n"
 
     constructor(time) {
         this.time = time
@@ -16,6 +17,10 @@ class BerlinClock {
         return error
     }
 
+    addLineEnd(line) {
+        return line + this.lineEnd
+    }
+
     showSeconds() {
          let seconds = this.time.split(":")[2]
          return seconds % 2 === 0 ? 'Y' : 'O'
@@ -24,9 +29,7 @@ class BerlinClock {
     showFiveHours() {
         let secondRow = ['O', 'O', 'O', 'O']
         let hours = this.time.split(":")[0]
-        console.log(hours)
         let fiveHours = Math.floor(hours / 5);
-        console.log(fiveHours)
         let fiveIndex = 0;
         while(fiveIndex < fiveHours) {
             secondRow[fiveIndex] = 'R'
@@ -39,8 +42,8 @@ class BerlinClock {
 
     showClock() {
         let error = this.checkValidity();
-        return  error === null ? this.showSeconds()+"\n"+
-            this.showFiveHours()+"\nRROO\nYYRYYRYYRYY\nYOOO": error
+        return  error === null ? this.addLineEnd(this.showSeconds())+
+            this.addLineEnd(this.showFiveHours())+"RROO\nYYRYYRYYRYY\nYOOO": error
     }
 }
 
