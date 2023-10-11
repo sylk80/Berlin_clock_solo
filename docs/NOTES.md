@@ -63,10 +63,10 @@ YOOO
 - Output should have 5 rows :heavy_check_mark:
 
 :heavy_plus_sign: Row test
-
-- First row Y on even seconds
-- First row O on odd seconds
-- Second row 0000 on 0-4 hours plus,
+ 
+- First row Y on even seconds :heavy_check_mark:
+- First row O on odd seconds :heavy_check_mark:
+- Second row 0000 on 0-4 hours plus, :heavy_check_mark:
 - Second row R000 on 5-9 hours plus, 
 - Second row RR00 on 10-14 hours plus, 
 - Second row RRR0 on 15-19 hours plus, 
