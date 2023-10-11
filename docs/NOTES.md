@@ -71,7 +71,7 @@ YOOO
 - Second row RR00 on 10-14 hours plus, 
 - Second row RRR0 on 15-19 hours plus, 
 - Second row RRRR on 20-23 hours plus, :heavy_check_mark:
-- Third row 0000 on (4+5x)0 hours plus,
+- Third row 0000 on (4+5x)0 hours plus, :heavy_check_mark:
 - Third row R000 on (4+5x)1 hour plus,
 - Third row RR00 on (4+5x)2 hours plus,
 - Third row RRR0 on (4+5x)3 hours plus,
