@@ -46,12 +46,22 @@ describe('Berlin Clock rows testing...', () => {
     });
     test('second row should return OOOO on 03:00:00...', () => {
         const clock = show_berlin_clock("03:00:00")
-        let firstRow = getNthRow(clock, 1)
-        expect(firstRow).toBe('OOOO');
+        let secondRow = getNthRow(clock, 1)
+        expect(secondRow).toBe('OOOO');
     });
     test('second row should return OOOO on 07:00:00...', () => {
         const clock = show_berlin_clock("07:00:00")
-        let firstRow = getNthRow(clock, 1)
-        expect(firstRow).toBe('ROOO');
+        let secondRow = getNthRow(clock, 1)
+        expect(secondRow).toBe('ROOO');
+    });
+    test('second row should return RRRR on 23:00:00...', () => {
+        const clock = show_berlin_clock("23:00:00")
+        let secondRow = getNthRow(clock, 1)
+        expect(secondRow).toBe('RRRR');
+    });
+    test('third row should return OOOO on 04:00:00...', () => {
+        const clock = show_berlin_clock("04:00:00")
+        let thirdRow = getNthRow(clock, 2)
+        expect(thirdRow).toBe('OOOO');
     });
 })
