@@ -84,4 +84,9 @@ describe('Berlin Clock rows testing...', () => {
         let fourthRow = getNthRow(clock, 3)
         expect(fourthRow).toBe('YYROOOOOOOO');
     });
+    test('fourth row should return YYRYYRYYRYY on 04:55:00...', () => {
+        const clock = show_berlin_clock("04:55:00")
+        let fourthRow = getNthRow(clock, 3)
+        expect(fourthRow).toBe('YYRYYRYYRYY');
+    });
 })

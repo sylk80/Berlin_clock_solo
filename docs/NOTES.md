@@ -79,7 +79,8 @@ YOOO
 - Fourth row 00000000000 - 0 minutes :heavy_check_mark:
 - Fourth row Y0000000000 - 5 minutes :heavy_check_mark:
 - Fourth row YY000000000 - 10 minutes
-- Fourth row YYR00000000 - 15 minutes
+- Fourth row YYR00000000 - 15 minutes :heavy_check_mark:
+- Fourth row YYRYYRYYRYY - 55 minutes 
 - Fifth row 0000 on 0 minutes,
 - Fifth row Y000 on 1 minutes
 - Fifth row YY00 on 2 minutes
