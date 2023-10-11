@@ -39,4 +39,14 @@ describe('Berlin Clock rows testing...', () => {
         let firstRow = getNthRow(clock, 0)
         expect(firstRow).toBe('Y');
     });
+    test('first row should return O on 00:00:01...', () => {
+        const clock = show_berlin_clock("00:00:01")
+        let firstRow = getNthRow(clock, 0)
+        expect(firstRow).toBe('O');
+    });
+    test('second row should return OOOO on 00:03:00...', () => {
+        const clock = show_berlin_clock("00:03:00")
+        let firstRow = getNthRow(clock, 1)
+        expect(firstRow).toBe('OOOO');
+    });
 })
