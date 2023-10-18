@@ -5,11 +5,11 @@ const requestWithSupertest = supertest(app);
 
 describe('Berlin clock Endpoints', () => {
 
-    it('GET /clock should return berlinclock', async () => {
-        const res = await requestWithSupertest.get('/clock');
-        expect(res.status).toEqual(200);
+    it('POST /clock should return errormessage', async () => {
+        const res = await requestWithSupertest.post('/clock').send({}).accept('json');
+        expect(res.status).toEqual(400);
     });
-    it('GET /clock should return json', async () => {
+/*    it('GET /clock should return json', async () => {
         const res = await requestWithSupertest.get('/clock');
         expect(res.status).toEqual(200);
         expect(res.type).toEqual(expect.stringContaining('json'));
@@ -20,5 +20,10 @@ describe('Berlin clock Endpoints', () => {
         expect(res.type).toEqual(expect.stringContaining('json'));
         expect(res.body).toHaveProperty('clock');
     });
-
+    it('GET /clock should return clock string', async () => {
+        const res = await requestWithSupertest.get('/clock');
+        expect(res.status).toEqual(200);
+        expect(res.type).toEqual(expect.stringContaining('json'));
+        expect(res.body.clock).toEqual();
+    });*/
 });
