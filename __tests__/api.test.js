@@ -9,6 +9,11 @@ describe('Berlin clock Endpoints', () => {
         const res = await requestWithSupertest.post('/clock').send({}).accept('json');
         expect(res.status).toEqual(400);
     });
+    it('POST /clock should return error message string', async () => {
+        const res = await requestWithSupertest.post('/clock').send({}).accept('json');
+        expect(res.status).toEqual(400);
+        expect(res.type).toEqual(expect.stringContaining('json'));
+    });
 /*    it('GET /clock should return json', async () => {
         const res = await requestWithSupertest.get('/clock');
         expect(res.status).toEqual(200);
