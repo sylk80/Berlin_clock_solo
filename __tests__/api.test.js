@@ -27,4 +27,11 @@ describe('Berlin clock Endpoints', () => {
         expect(res.body).toHaveProperty('error');
         expect(res.body.error).toEqual("Input time is required")
     });
+    it('POST /clock should return different error message string with time value', async () => {
+        const res = await requestWithSupertest.post('/clock').send({"time":"123"}).accept('json');
+        expect(res.status).toEqual(400);
+        expect(res.type).toEqual(expect.stringContaining('json'));
+        expect(res.body).toHaveProperty('error');
+        expect(res.body.error).toEqual("Time required in HH:mm:ss format")
+    });
 });
