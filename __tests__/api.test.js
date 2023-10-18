@@ -14,5 +14,11 @@ describe('Berlin clock Endpoints', () => {
         expect(res.status).toEqual(200);
         expect(res.type).toEqual(expect.stringContaining('json'));
     });
+    it('GET /clock should return clock', async () => {
+        const res = await requestWithSupertest.get('/clock');
+        expect(res.status).toEqual(200);
+        expect(res.type).toEqual(expect.stringContaining('json'));
+        expect(res.body).toHaveProperty('clock');
+    });
 
 });

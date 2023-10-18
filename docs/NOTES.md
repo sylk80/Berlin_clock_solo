@@ -90,6 +90,6 @@ YOOO
 
 :api tests
 - should have an endpoint :heavy_check_mark:
-- should return json
+- should return json :heavy_check_mark:
 - endpoint should get time
 - should return clock string
